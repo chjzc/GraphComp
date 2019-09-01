@@ -56,7 +56,7 @@ function showNextTask(){
     var type = nextTask.split("-")[0];
 
     currentTask = nextTask;
-    document.getElementById('mainview').src = "./img/" + nextTask + ".jpeg";
+    document.getElementById('mainview').src = "img/" + nextTask + ".jpeg";
 
     if(type == "task1"){
         document.getElementById('choice').innerHTML = 
