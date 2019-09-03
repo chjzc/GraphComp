@@ -51,7 +51,7 @@ function showNextTask(){
             `<span>Given the same two highlighted nodes in each graph, 
             determine whether the distance between the two nodes are shorter or longer from G1 to G2.</span>
             <br>
-            <input type="radio" name="answer" value="Shorter" />Short
+            <input type="radio" name="answer" value="Shorter" />Shorter
             <input type="radio" name="answer" value="Same"/>Same
             <input type="radio" name="answer" value="Longer" />Longer
             <input type="radio" name="answer" value="Uncertain" />Uncertain`;
