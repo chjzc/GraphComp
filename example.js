@@ -36,6 +36,7 @@ function showNextTask(){
     var type = nextTask.split("-")[0];
 
     currentTask = nextTask;
+    document.getElementById('mainview').src = "";
     document.getElementById('mainview').src = "http://xumaoran.com/GraphComp/example/" + nextTask + ".jpeg";
 
     if(type == "task1"){
