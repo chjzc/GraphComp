@@ -56,7 +56,7 @@ function showNextTask(){
     var type = nextTask.split("-")[0];
 
     currentTask = nextTask;
-    document.getElementById('mainview').src = "./img/" + nextTask + ".jpeg";
+    document.getElementById('mainview').src = "/img/" + nextTask + ".jpeg";
 
     if(type == "task1"){
         document.getElementById('choice').innerHTML = 
@@ -64,15 +64,17 @@ function showNextTask(){
             <br>
             <input type="radio" name="answer" value="A" />A
             <input type="radio" name="answer" value="B"/>B
-            <input type="radio" name="answer" value="C" />C`;
+            <input type="radio" name="answer" value="C" />C
+            <input type="radio" name="answer" value="Uncertain" />Uncertain`;
     }else if(type == "task2"){
         document.getElementById('choice').innerHTML = 
             `<span>Given the same two highlighted nodes in each graph, 
             determine whether the distance between the two nodes are shorter or longer from G1 to G2.</span>
             <br>
-            <input type="radio" name="answer" value="Short" />Short
+            <input type="radio" name="answer" value="Shorter" />Short
             <input type="radio" name="answer" value="Same"/>Same
-            <input type="radio" name="answer" value="Longer" />Longer`;
+            <input type="radio" name="answer" value="Longer" />Longer
+            <input type="radio" name="answer" value="Uncertain" />Uncertain`;
     }else if(type == "task4"){
         document.getElementById('choice').innerHTML = 
             `<span>Score the similarity between G1 and G2, from 1 to 5.</span>
@@ -81,7 +83,8 @@ function showNextTask(){
             <input type="radio" name="answer" value="2" />2
             <input type="radio" name="answer" value="3" />3
             <input type="radio" name="answer" value="4" />4
-            <input type="radio" name="answer" value="5" />5`;
+            <input type="radio" name="answer" value="5" />5
+            <input type="radio" name="answer" value="Uncertain" />Uncertain`;
     }
 }
 
