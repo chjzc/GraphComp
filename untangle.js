@@ -9,7 +9,7 @@ var currentTask;
 
 function saveCsv(){
     var blob = new Blob(report, {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "result.csv");
+    saveAs(blob, "untangle_result.csv");
 }
 
 function addRow(taskid, result, time){
@@ -17,13 +17,13 @@ function addRow(taskid, result, time){
 }
 
 function initTasks(){
-    for(var i = 1; i <= 36; i++){
+    for(var i = 3; i <= 36; i = i+3){
         taskArr.push("task1-" + i);
     }
-    for(var i = 1; i <= 72; i++){
+    for(var i = 3; i <= 72; i = i+3){
         taskArr.push("task2-" + i);
     }
-    for(var i = 1; i <= 72; i++){
+    for(var i = 3; i <= 72; i = i+3){
         taskArr.push("task4-" + i);
     }
     addRow("taskid", "answer", "time");
@@ -33,7 +33,7 @@ function next(){
     if(!startTime){
         startTime = new Date();
         showNextTask();
-        document.getElementById('count').innerHTML = "1 / 180";
+        document.getElementById('count').innerHTML = "1 / 60";
     }
     else{
         var answer = getRadioValue("answer");
@@ -42,7 +42,7 @@ function next(){
         addRow(currentTask, answer, endTime - startTime);
         if(taskArr.length) {
             startTime = endTime;
-            document.getElementById('count').innerHTML = 180 - taskArr.length + 1 + " / 180";
+            document.getElementById('count').innerHTML = 60 - taskArr.length + 1 + " / 60";
             showNextTask();
         }else saveCsv();
     }
