@@ -57,7 +57,7 @@ function showNextTask(){
 
     currentTask = nextTask;
     document.getElementById('mainview').src = "";
-    document.getElementById('mainview').src = "img/" + nextTask + ".jpeg";//http://xumaoran.com/GraphComp/
+    document.getElementById('mainview').src = "http://xumaoran.com/GraphComp/img/" + nextTask + ".jpeg";//
 
     if(type == "task1"){
         document.getElementById('choice').innerHTML = 
